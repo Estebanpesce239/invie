@@ -8,6 +8,10 @@
 body{
 	font-family: 'Allerta',sans-serif;
 	margin: 0;
+	/* stikyfooter*/
+	display: flex;
+	min-height: 100vh;/*para que el body sea el 100% del viuport(sin importar el contenido) */
+	flex-wrap: wrap; /**/
 }
 
 .button{ 
@@ -58,6 +62,7 @@ body{
 	color: white;
 	padding: 20px;	
 	height: 500px;
+	width: 100%;
 }
 
 .portada button{
@@ -142,10 +147,6 @@ color: #273b47;
 	position: relative;
 }
 
-.footer{
-	background: #273b47;
-}
-
 .contacto{
 	display: flex;
 	width: 300px;
@@ -166,6 +167,12 @@ color: #273b47;
 	text-decoration: none;
 	margin: 10px 10px 10px 0;
 } 
+.footer{
+	background: #273b47;
+	align-self: flex-end; /*para que vaya al final del flex*/
+	width: 100%;
+
+}
 
 .footer .contenedor{
 	display: flex;
@@ -206,6 +213,8 @@ color: #273b47;
 
 table{
 	width: 100%; 
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 th {
