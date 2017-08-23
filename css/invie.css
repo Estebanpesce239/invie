@@ -290,10 +290,11 @@ table, td, th{
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;
-	position: absolute;
-	left: -100px;
+	position: fixed;
+	left: 20px;
 	top: 20px;
 	z-index: 3;
+	display: none;
 }
 
 
@@ -432,6 +433,12 @@ table, td, th{
 }
 @media screen and (max-width: 500px){
 	/*portada*/
+	.portada .button{
+		display: block;
+	}
+	.precios .header .logotipo{
+		margin: 50px 0;
+	}
 	.portada .contenedor{
 		position: static;
 	}
@@ -442,11 +449,11 @@ table, td, th{
 		position: static;
 	}
 	.burguer-button{
-		left: 20px;
+		display: block;
 	}
 	.menu{
 		background: rgba(255, 60, 88, .8);
-		position: absolute;
+		position: fixed;
 		left: -100%;
 		top: 0;
 		bottom: 0;
@@ -498,6 +505,13 @@ table, td, th{
 		font-size: 30px;
 	}
 
-
 	/*guitrras*/
+
+	/*footer*/
+	/*.col2 .button {
+		display: block;
+		align-items: stretch;
+	}*/
+	
+	/*footer*/
 }
