@@ -5,27 +5,31 @@
 		<meta charset="utf-8"/>
 		<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
 		<link rel="stylesheet" href="css/invie.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 	</head>
 	<body>
-		<header id="header" class="header contenedor"> <!-- header -->
-			
-			<figure class="logotipo"> <!-- logotipo -->
-				<img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
-			</figure>
-			<nav class="menu menuprecios"> <!-- menu -->
-				<ul>
-					<li>
-						<a href="index.html">Home</a>
-					</li>
-					<li>
-						<a href="precios.html">Precios</a>
-					</li>
-					<li>
-						<a href="index.html#guitarras">Guitarras</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+		<section id="portada" class="portada portadaprecios"> <!-- portada --> 
+			<header id="header" class="header contenedor"> <!-- header -->
+				
+				<figure class="logotipo"> <!-- logotipo -->
+					<img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
+				</figure>
+				<span class="burguer-button icon-menu" id="burguer-button"></span>
+				<nav class="menu menuprecios" id="menu"> <!-- menu -->
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="precios.html">Precios</a>
+						</li>
+						<li>
+							<a href="index.html#guitarras">Guitarras</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+		</section>
 		<section class="tabla contenedor">
 			<div class="contenedor">
 				<table>
@@ -33,11 +37,17 @@
 					<tr>
 						<th>Modelos</th>
 						<th>Precios</th>
-						<th>Descripción</th>					
+						<th>Descripción</th>	
+						<th>Modelos</th>
+						<th>Precios</th>
+						<th>Descripción</th>				
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
+						<td>Invie Classic</td>
+						<td>$100000</td>
+						<td>Una guitarra muy pro</td>
 						<td>Invie Classic</td>
 						<td>$100000</td>
 						<td>Una guitarra muy pro</td>
@@ -46,8 +56,14 @@
 						<td>Invie Acustica</td>
 						<td>$145000</td>
 						<td>Calidad de sonido mejorada</td>
+						<td>Invie Acustica</td>
+						<td>$145000</td>
+						<td>Calidad de sonido mejorada</td>
 					</tr>
 					<tr>
+						<td>Invie Custom</td>
+						<td>$110000</td>
+						<td>Customiza tu Rock</td>
 						<td>Invie Custom</td>
 						<td>$110000</td>
 						<td>Customiza tu Rock</td>
@@ -59,7 +75,7 @@
 		<footer class="footer">
 			<div class="contenedor">				
 				<div class="contacto">	
-					<img src="images/invie-white.png" alt="logotipo blaco">
+					<img src="images/invie-white.png"  alt="logotipo blaco">
 					<a href="tel:03571425489"><strong>Telefono</strong><span>03571425489</span></a>
 					<a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>contacto@invie.com</span></a>
 				</div>
@@ -105,8 +121,35 @@
 				</form>				
 			</div>
 		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+		<script>
+			var consulta = window.matchMedia('(max-width: 500px)');
+			consulta.addListener(mediaQuery);
+
+			var $burguerButton = document.getElementById("burguer-button");
+			var $menu = document.getElementById("menu");
+
+			
+			function toggleMenu(){
+				$menu.classList.toggle('active')
+			};
+			function mediaQuery() {
+				if(consulta.matches) {
+					console.log('se cumplio condicion');
+					$burguerButton.addEventListener('touchstart', toggleMenu);
+				} else{
+					console.log('NO se cumplio condicion');
+					$burguerButton.removeEventListener('touchstart', toggleMenu);
+				}
+			}
+			mediaQuery();
+			//lazy loanding
+			var bLazy = new Blazy({
+    		selector:'img'
+			});
+		</script>
 	</body>
 
-	
+</html>
 
 	

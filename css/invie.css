@@ -51,7 +51,7 @@ body{
 	/* stikyfooter*/
 	display: flex;
 	min-height: 100vh;/*para que el body sea el 100% del viuport(sin importar el contenido) */
-	flex-wrap: wrap; /**/
+	flex-wrap: wrap; 
 }
 
 .button{ 
@@ -99,10 +99,14 @@ body{
 .portada{
 	background-image: url(../images/background.png);
 	background-size: cover;
+	background-color: #334d5e;
 	color: white;
 	padding: 20px;	
 	height: 500px;
 	width: 100%;
+}
+.portadaprecios{
+	height: 350px;
 }
 
 .portada button{
@@ -132,9 +136,9 @@ body{
 	color: white;
 	text-decoration: none;
 }
-.menuprecios a{
+/*.menuprecios a{
 color: #273b47;
-}
+}*/
 
 .logotipo{
 	display: inline-block;
@@ -158,7 +162,7 @@ color: #273b47;
 }
 .contenedor{
 	width: 800px;
-	margin: auto;
+	margin: 10px auto;
 	max-width: 800px;
 }
 
@@ -256,11 +260,11 @@ color: #273b47;
 	margin-top: 10px;
 }
 
-table{
+/*table{
 	width: 100%; 
 	margin-top: 50px;
 	margin-bottom: 50px;
-}
+}*/
 
 th {
 	background: #273b47;
@@ -287,15 +291,27 @@ table, td, th{
 	text-align: center;
 	cursor: pointer;
 	position: absolute;
-	left: 20px;
+	left: -100px;
 	top: 20px;
 	z-index: 3;
 }
 
 
 @media screen and (max-width: 800px) {
-	
+	/*precios*/
+	.tabla{
+		margin: 50px 20px;
+	}
+	.tabla .contenedor{
+		overflow: auto;
+		border: 1px solid #273b47;
+	}
+	/*precios*/
+
 /* portada */
+	body{
+		display: block;
+	}
 	.menu{
 		font-size: 21px;
 	}
@@ -312,6 +328,7 @@ table, td, th{
 	}
 	.portada{
 		height: auto;
+		width: auto;
 	}
 	.portada .buttom {
 		margin-bottom: 30px;
@@ -383,8 +400,9 @@ table, td, th{
 	textarea{
 		width: 100%;
 	}
+
 	imput[type="radio"], imput[type="checkbox"] {
-		zoom:1.5 ;
+	zoom: 1.5;
 	}
 	/*footer*/
 }
@@ -416,6 +434,15 @@ table, td, th{
 	/*portada*/
 	.portada .contenedor{
 		position: static;
+	}
+	.header {
+		position: static;
+	}
+	.header .contenedor{
+		position: static;
+	}
+	.burguer-button{
+		left: 20px;
 	}
 	.menu{
 		background: rgba(255, 60, 88, .8);
