@@ -198,6 +198,7 @@ color: #273b47;
 	flex-wrap: wrap;
 	align-items: center;
 	padding-bottom: 40px;
+	margin-left: 10px;
 }
 
 .contacto img {
@@ -377,6 +378,7 @@ table, td, th{
 	}
 	.contacto{
 		margin: 0 auto;
+		padding-bottom: 15px;
 	}
 	.formulario{
 		display: block;
@@ -384,27 +386,37 @@ table, td, th{
 		width: 300px;
 		padding: 10px;
 	}
+	.sexo label {
+		display: block;
+	}
+	.formulario label {
+		font-size: 20px;
+	}
 
 	.intereses label{
 		display: block;
-		font-size: 16px;
+		font-size: 20px;
 	}
 
 	.col1{
 		margin: 0;
 	}
 
-	imput[type="text"], imput[type="email"] {
-		font-size: 16px;
-		padding: 5px;
+	input[type="text" i], input[type="email" i] {
+    margin-bottom: 25px;
+    font-size: 20px;
+    padding: 5px;
 	}
+
+	input[type="radio" i], input[type="checkbox" i] {
+    zoom: 1.5;
+	}
+		
 	textarea{
 		width: 100%;
 	}
 
-	imput[type="radio"], imput[type="checkbox"] {
-	zoom: 1.5;
-	}
+	
 	/*footer*/
 }
 
